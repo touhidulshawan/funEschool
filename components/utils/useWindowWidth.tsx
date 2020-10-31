@@ -1,15 +1,22 @@
 import { useState, useEffect } from "react";
 
-const getCurrentWidth = () =>
-  window.innerWidth ||
-  document.documentElement.clientWidth ||
-  document.body.clientWidth;
-
 export const useWindowWidth = () => {
-  let [width, setwidth] = useState(getCurrentWidth());
+  let [width, setwidth] = useState<number>();
 
   useEffect(() => {
-    let time = null;
+    const getCurrentWidth = () =>
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
+    setwidth(getCurrentWidth());
+  });
+
+  useEffect(() => {
+    let time: any;
+    const getCurrentWidth = () =>
+      window.innerWidth ||
+      document.documentElement.clientWidth ||
+      document.body.clientWidth;
     const resizeListner = () => {
       clearTimeout(time);
 
