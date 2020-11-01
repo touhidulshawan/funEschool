@@ -6,21 +6,15 @@ import HeroImage from "../components/home/HeroImage";
 
 function Home() {
   return (
-    <>
-      <Head>
-        <title>FuneSchool</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Layout>
-        <div>
-          <Bio />
-          <Button btnName="Start Learing" />
-        </div>
-        <div>
-          <HeroImage />
-        </div>
-      </Layout>
-    </>
+    <Layout title="FuneSchool">
+      <div>
+        <Bio />
+        <Button btnName="Start Learing" />
+      </div>
+      <div>
+        <HeroImage />
+      </div>
+    </Layout>
   );
 }
 export default Home;

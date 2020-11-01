@@ -1,0 +1,12 @@
+[
+    {
+        "id": "class#1",
+        "title": "Class-I",
+        "bookName": ["English", "Math", "Bangla"]
+    },
+    {
+        "id": "class#2",
+        "title": "Class-II",
+        "bookName": ["English", "Math", "Bangla"]
+    },
+}
