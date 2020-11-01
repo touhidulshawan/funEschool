@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Layout from "../../../components/Layout";
 import { fetchQuestions, Difficulty, QuestionState } from "./API";
 import Question from "./Question";
 
@@ -72,56 +73,58 @@ const Quiz = () => {
     }
   };
   return (
-    <div className="w-10/12 h-full p-4 m-auto my-4 bg-gray-100 rounded-sm md:w-2/4 shadow-sm">
-      <header>
-        <h1 className="text-2xl font-bold text-center text-gray-800 uppercase">
-          Pop Quiz
-        </h1>
-        {gameOver || userAnswer.length === TOTAL_QUESTION ? (
-          <button
-            onClick={startQuiz}
-            className="text-purple-100 bg-purple-600 border-purple-200 btn focus:shadow-outline hover:bg-purple-400 hover:text-purple-700 transform hover:translate-y-1"
-          >
-            Start Quiz
-          </button>
-        ) : null}
-        {!gameOver ? (
-          <p className="p-4 my-4 font-bold tracking-widest text-blue-700 bg-blue-100 rounded-lg">
-            Score: {score}
-          </p>
-        ) : null}
-      </header>
-      <main>
-        {loading ? (
-          <p className="tracking-widest text-gray-700 animate-pulse">
-            Loading question...
-          </p>
-        ) : null}
-        {!loading && !gameOver ? (
-          <Question
-            questionNumber={quesNumber + 1}
-            totalQuestions={TOTAL_QUESTION}
-            question={questions[quesNumber].question}
-            answers={questions[quesNumber].answers}
-            userAnswer={userAnswer[quesNumber]}
-            correctAnswer={questions[quesNumber].correct_answer}
-            giveAnswer={isClicked}
-            handleCheckAnswer={checkAnswer}
-          />
-        ) : null}
-        {!gameOver &&
-        !loading &&
-        userAnswer.length === quesNumber + 1 &&
-        quesNumber !== TOTAL_QUESTION - 1 ? (
-          <button
-            className="text-indigo-100 bg-indigo-700 border-indigo-200 btn focus:shadow-outline hover:bg-indigo-400 hover:text-indigo-700 transform hover:translate-y-1"
-            onClick={nextQuestion}
-          >
-            Next Question
-          </button>
-        ) : null}
-      </main>
-    </div>
+    <Layout title="Pop Quiz">
+      <section className="w-10/12 h-full p-4 m-auto my-4 bg-gray-100 rounded-sm md:w-2/4 shadow-sm">
+        <div>
+          <h1 className="text-2xl font-bold text-center text-gray-800 uppercase">
+            Pop Quiz
+          </h1>
+          {gameOver || userAnswer.length === TOTAL_QUESTION ? (
+            <button
+              onClick={startQuiz}
+              className="text-purple-100 bg-purple-600 border-purple-200 btn focus:shadow-outline hover:bg-purple-400 hover:text-purple-700 transform hover:translate-y-1"
+            >
+              Start Quiz
+            </button>
+          ) : null}
+          {!gameOver ? (
+            <p className="p-4 my-4 font-bold tracking-widest text-blue-700 bg-blue-100 rounded-lg">
+              Score: {score}
+            </p>
+          ) : null}
+        </div>
+        <div>
+          {loading ? (
+            <p className="tracking-widest text-gray-700 animate-pulse">
+              Loading question...
+            </p>
+          ) : null}
+          {!loading && !gameOver ? (
+            <Question
+              questionNumber={quesNumber + 1}
+              totalQuestions={TOTAL_QUESTION}
+              question={questions[quesNumber].question}
+              answers={questions[quesNumber].answers}
+              userAnswer={userAnswer[quesNumber]}
+              correctAnswer={questions[quesNumber].correct_answer}
+              giveAnswer={isClicked}
+              handleCheckAnswer={checkAnswer}
+            />
+          ) : null}
+          {!gameOver &&
+          !loading &&
+          userAnswer.length === quesNumber + 1 &&
+          quesNumber !== TOTAL_QUESTION - 1 ? (
+            <button
+              className="text-indigo-100 bg-indigo-700 border-indigo-200 btn focus:shadow-outline hover:bg-indigo-400 hover:text-indigo-700 transform hover:translate-y-1"
+              onClick={nextQuestion}
+            >
+              Next Question
+            </button>
+          ) : null}
+        </div>
+      </section>
+    </Layout>
   );
 };
 
