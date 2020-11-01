@@ -12,6 +12,6 @@ For that first you should have [nodejs](https://nodejs.org/en/) install in your 
 
 1. Clone or download source code ⬇️
 2. Go to funeschool directory and run `npm install`
-3. Then run `npm start` and open [http://localhost:3000](http://localhost:3000) in your browser to see the project
+3. Then run `npm run dev` and open [http://localhost:3000](http://localhost:3000) in your browser to see the project
 
 > **Project will be live as soon as development work finished**
