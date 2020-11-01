@@ -16,7 +16,11 @@ const Games: React.FC = () => {
       <section>
         <h1>Games Pages</h1>
         {gamesData.map((game) => (
-          <GameName gameLinkName={game.gameLinkName} gameName={game.gameName} />
+          <GameName
+            key={game.id}
+            gameLinkName={game.gameLinkName}
+            gameName={game.gameName}
+          />
         ))}
       </section>
     </Layout>
