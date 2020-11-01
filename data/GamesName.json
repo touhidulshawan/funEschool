@@ -10,11 +10,6 @@
     "gameLinkName": "name_that_animal"
   },
   {
-    "id": "games#3",
-    "gameName": "Math Game",
-    "gameLinkName": "math_game"
-  },
-  {
     "id": "games#4",
     "gameName": "Counting",
     "gameLinkName": "counting"
