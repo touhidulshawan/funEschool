@@ -1,8 +1,12 @@
+import Layout from "../../../components/Layout";
+
 const Bangla: React.FC = () => {
   return (
-    <div>
-      <h1>Bangla</h1>
-    </div>
+    <Layout title="Bangla">
+      <section>
+        <h1>Bangla</h1>
+      </section>
+    </Layout>
   );
 };
 export default Bangla;

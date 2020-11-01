@@ -1,8 +1,12 @@
+import Layout from "../../../components/Layout";
+
 const Math: React.FC = () => {
   return (
-    <div>
-      <h1>Math</h1>
-    </div>
+    <Layout title="Math">
+      <section>
+        <h1>Math</h1>
+      </section>
+    </Layout>
   );
 };
 

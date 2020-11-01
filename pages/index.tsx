@@ -1,4 +1,4 @@
-import Head from "next/head";
+import Link from "next/link";
 import Layout from "../components/Layout";
 import Bio from "../components/home/Bio";
 import Button from "../components/Button";
@@ -9,7 +9,9 @@ function Home() {
     <Layout title="FuneSchool">
       <div>
         <Bio />
-        <Button btnName="Start Learing" />
+        <Link href="/learn">
+          <a>Start Learning</a>
+        </Link>
       </div>
       <div>
         <HeroImage />

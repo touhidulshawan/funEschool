@@ -1,0 +1,22 @@
+[
+  {
+    "id": "games#1",
+    "gameName": "Pop Quiz",
+    "gameLinkName": "pop_quiz"
+  },
+  {
+    "id": "games#2",
+    "gameName": "Name That Animal",
+    "gameLinkName": "name_that_animal"
+  },
+  {
+    "id": "games#3",
+    "gameName": "Math Game",
+    "gameLinkName": "math_game"
+  },
+  {
+    "id": "games#4",
+    "gameName": "Counting",
+    "gameLinkName": "counting"
+  }
+]
