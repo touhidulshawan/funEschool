@@ -1,12 +1,10 @@
 import { useState, useEffect, FormEvent } from "react";
+import GameDashboard from "../../../components/GameDashboard";
+import ImageCard from "../../../components/ImageCard";
 import Layout from "../../../components/Layout";
+import ScoreBoard from "../../../components/ScoreBoard";
 import Data from "../../../data/NameThatPictureData.json";
-
-interface GameData {
-  id: string;
-  name: string;
-  imgPath: string;
-}
+import { GameData } from "../../../utils/GameDataInterface";
 
 const NameThatPicture: React.FC = () => {
   const [gameData] = useState<Array<GameData>>(Data);
@@ -52,12 +50,8 @@ const NameThatPicture: React.FC = () => {
     <Layout title="Name That Picture">
       {counter <= 24 ? (
         <section>
-          <div>
-            <h1>Score: {score}</h1>
-          </div>
-          <div>
-            <img src={currentImage} alt="" />
-          </div>
+          <ScoreBoard score={score} />
+          <ImageCard currentImgPath={currentImage} />
           <form method="post" onSubmit={handleSubmit}>
             <input
               value={answer}
@@ -73,11 +67,11 @@ const NameThatPicture: React.FC = () => {
           </form>
         </section>
       ) : (
-        <section>
-          <h1>Your Score: {score} out of 25</h1>
-          <h2>Total wrong answer: {wrongAnswer}</h2>
-          <button onClick={handleRestartGame}>Play Again</button>
-        </section>
+        <GameDashboard
+          score={score}
+          wrongAnswer={wrongAnswer}
+          handleRestartGame={handleRestartGame}
+        />
       )}
     </Layout>
   );
