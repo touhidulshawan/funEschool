@@ -1,13 +1,15 @@
+import { InferGetStaticPropsType } from "next";
 import { useState, useEffect, FormEvent } from "react";
 import GameDashboard from "../../../components/GameDashboard";
 import ImageCard from "../../../components/ImageCard";
 import Layout from "../../../components/Layout";
 import ScoreBoard from "../../../components/ScoreBoard";
-import Data from "../../../data/NameThatPictureData.json";
 import { GameData } from "../../../utils/GameDataInterface";
 
-const NameThatPicture: React.FC = () => {
-  const [gameData] = useState<Array<GameData>>(Data);
+const NameThatPicture = ({
+  data,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [gameData] = useState<Array<GameData>>(data);
   const [counter, setCounter] = useState<number>(0);
   const [currentImage, setCurrentImage] = useState<string>(gameData[0].imgPath);
   const [answer, setAnswer] = useState<string>("");
@@ -78,3 +80,17 @@ const NameThatPicture: React.FC = () => {
 };
 
 export default NameThatPicture;
+
+export const getStaticProps = async () => {
+  const response = await fetch(
+    "https://gist.githubusercontent.com/touhidulShawan/ef6331bd216179a110fd1ace2f1b1c63/raw/0337233b13854a1ce919d03cb39186b229947731/NameThatPictureData"
+  );
+
+  const data: GameData[] = await response.json();
+
+  return {
+    props: {
+      data,
+    },
+  };
+};

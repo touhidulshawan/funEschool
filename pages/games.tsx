@@ -1,21 +1,21 @@
-import { useState } from "react";
+import { InferGetStaticPropsType } from "next";
 import GameName from "../components/gameName/GameName";
 import Layout from "../components/Layout";
-import GamesNameData from "../data/GamesName.json";
 
-interface GamesData {
+interface GamesNames {
   id: string;
   gameName: string;
   gameLinkName: string;
 }
 
-const Games: React.FC = () => {
-  const [gamesData] = useState<Array<GamesData>>(GamesNameData);
+const Games = ({
+  gameNames,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Games">
       <section>
         <h1>Games Pages</h1>
-        {gamesData.map((game) => (
+        {gameNames.map((game) => (
           <GameName
             key={game.id}
             gameLinkName={game.gameLinkName}
@@ -27,3 +27,16 @@ const Games: React.FC = () => {
   );
 };
 export default Games;
+
+export const getStaticProps = async () => {
+  const response = await fetch(
+    "https://gist.githubusercontent.com/touhidulShawan/c91a867693ff825c42fb7d5a1fc2fa46/raw/472b76954a5db80865b4270d1f2e1483de6d914f/GameName"
+  );
+  const gameNames: GamesNames[] = await response.json();
+
+  return {
+    props: {
+      gameNames,
+    },
+  };
+};

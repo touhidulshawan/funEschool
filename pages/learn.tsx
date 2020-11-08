@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
-import CourseData from "../data/Course.json";
 import Book from "../components/book/Book";
+import { InferGetStaticPropsType } from "next";
 
 interface Book {
   id: string;
@@ -14,8 +14,9 @@ interface Course {
   bookName: Array<Book>;
 }
 
-const Learn: React.FC = () => {
-  const [courseData] = useState<Array<Course>>(CourseData);
+const Learn = ({
+  courseData,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Learn">
       {courseData.map((course) => (
@@ -31,3 +32,16 @@ const Learn: React.FC = () => {
 };
 
 export default Learn;
+
+export const getStaticProps = async () => {
+  const response = await fetch(
+    "https://gist.githubusercontent.com/touhidulShawan/d5532596aaa4b2c17c0c59976f03a9d6/raw/c692b61f802051ef6f34d46487d957d52f07dd29/Course"
+  );
+  const courseData: Course[] = await response.json();
+
+  return {
+    props: {
+      courseData,
+    },
+  };
+};
