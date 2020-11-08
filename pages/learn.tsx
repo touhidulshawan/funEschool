@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Layout from "../components/Layout";
-import CourData from "../data/Course.json";
+import CourseData from "../data/Course.json";
 import Book from "../components/book/Book";
 
 interface Book {
@@ -15,7 +15,7 @@ interface Course {
 }
 
 const Learn: React.FC = () => {
-  const [courseData] = useState<Array<Course>>(CourData);
+  const [courseData] = useState<Array<Course>>(CourseData);
   return (
     <Layout title="Learn">
       {courseData.map((course) => (

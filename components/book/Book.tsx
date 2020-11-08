@@ -8,7 +8,7 @@ interface BookProps {
 const Book: React.FC<BookProps> = ({ bookName, courseFor }) => {
   return (
     <div>
-      <Link href={`/courses/${courseFor}/${bookName}`}>
+      <Link href={`/courses/${courseFor}/${bookName.toLowerCase()}`}>
         <a>{bookName}</a>
       </Link>
     </div>
