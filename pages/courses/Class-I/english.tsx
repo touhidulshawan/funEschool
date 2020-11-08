@@ -12,7 +12,6 @@ type LearningData = {
 };
 
 const English = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  console.log(data);
   return (
     <Layout title="English">
       <section>
