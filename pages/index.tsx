@@ -6,7 +6,7 @@ import HeroImage from "../components/home/HeroImage";
 
 function Home() {
   return (
-    <Layout title="FuneSchool">
+    <Layout title="Fun-eSchool">
       <div>
         <Bio />
         <Link href="/learn">
