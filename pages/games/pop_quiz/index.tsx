@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../../components/Button";
 import Layout from "../../../components/Layout";
 import { fetchQuestions, Difficulty, QuestionState } from "./API";
 import Question from "./Question";
@@ -80,12 +81,7 @@ const Quiz = () => {
             Pop Quiz
           </h1>
           {gameOver || userAnswer.length === TOTAL_QUESTION ? (
-            <button
-              onClick={startQuiz}
-              className="text-purple-100 bg-purple-600 border-purple-200 btn focus:shadow-outline hover:bg-purple-400 hover:text-purple-700 transform hover:translate-y-1"
-            >
-              Start Quiz
-            </button>
+            <Button btnName="start quiz" handleClick={startQuiz} />
           ) : null}
           {!gameOver ? (
             <p className="p-4 my-4 font-bold tracking-widest text-blue-700 bg-blue-100 rounded-lg">
@@ -115,12 +111,7 @@ const Quiz = () => {
           !loading &&
           userAnswer.length === quesNumber + 1 &&
           quesNumber !== TOTAL_QUESTION - 1 ? (
-            <button
-              className="text-indigo-100 bg-indigo-700 border-indigo-200 btn focus:shadow-outline hover:bg-indigo-400 hover:text-indigo-700 transform hover:translate-y-1"
-              onClick={nextQuestion}
-            >
-              Next Question
-            </button>
+            <Button btnName="next question" handleClick={nextQuestion} />
           ) : null}
         </div>
       </section>

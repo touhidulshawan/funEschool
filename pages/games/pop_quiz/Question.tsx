@@ -26,18 +26,24 @@ const Question: React.FC<Props> = ({
       <p className="font-bold uppercase mb-3 text-pink-700">
         Questions: {questionNumber} / {totalQuestions}
       </p>
-      <p className="mb-3  " dangerouslySetInnerHTML={{ __html: question }} />
-      <div>
+      <p
+        className="mb-3 text-gray-700 "
+        dangerouslySetInnerHTML={{ __html: question }}
+      />
+      <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5">
         {answers.map((ans) => {
           return (
             <div key={ans}>
               <button
-                className="shadow-outline py-1 px-4 my-4 rounded-full block w-full"
+                className="shadow-outline py-2 px-4 my-4 text-gray-800 rounded-md block w-full"
                 disabled={userAnswer ? true : false}
                 value={ans}
                 onClick={handleCheckAnswer}
               >
-                <span dangerouslySetInnerHTML={{ __html: ans }} />
+                <span
+                  className="text-lg"
+                  dangerouslySetInnerHTML={{ __html: ans }}
+                />
               </button>
             </div>
           );
