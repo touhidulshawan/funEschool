@@ -38,7 +38,7 @@ export default English;
 
 export const getStaticProps = async () => {
   const response = await fetch(
-    "https://gist.githubusercontent.com/touhidulShawan/c01f749615b0d58f44d87ba453252705/raw/2370c1fa5baea5e37ad08d403b508c324de6a85e/Class-I_English"
+    "https://gist.githubusercontent.com/touhidulShawan/c01f749615b0d58f44d87ba453252705/raw/cc949eb548cfc068ec75d8992dd3f58e1b88c148/Class-I_English"
   );
 
   const data: LearningData[] = await response.json();

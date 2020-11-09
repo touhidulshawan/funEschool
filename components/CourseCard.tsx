@@ -14,7 +14,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   return (
     <div>
       <Link
-        href={`/course/${courseFor}/${bookName}/${name
+        href={`/learn/${courseFor}/${bookName.toLowerCase()}/${name
           .split(" ")
           .join("")
           .toLowerCase()}`}
