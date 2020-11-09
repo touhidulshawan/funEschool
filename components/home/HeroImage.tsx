@@ -5,8 +5,8 @@ const HeroImage: React.FC = () => {
     <Image
       src="/images/children.svg"
       alt="children Image"
-      width="100%"
-      height="100%"
+      width={400}
+      height={400}
     />
   );
 };

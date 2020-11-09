@@ -12,7 +12,7 @@ const Layout: React.FC<LayoutProps> = ({ title, children }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar />
-      <main>{children}</main>
+      <main className="container mx-auto">{children}</main>
     </>
   );
 };

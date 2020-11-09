@@ -1,6 +1,6 @@
 const Bio: React.FC = () => {
   return (
-    <p>
+    <p className="leading-8 text-lg text-left tracking-wider text-gray-300 my-4 lg:mt-8 lg:tracking-widest">
       Fun-eSchool is an online platform for kids to learn their lessons more
       attractively. This platform will help kids to be familiar with the
       computer. Our government is trying to create a digital Bangladesh. Our
