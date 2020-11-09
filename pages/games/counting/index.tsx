@@ -1,13 +1,13 @@
 import { useState, useEffect, FormEvent } from "react";
 import Layout from "../../../components/Layout";
 import { GameData } from "../../../utils/GameDataInterface";
-import Data from "../../../data/NameThatPictureData.json";
 import ImageCard from "../../../components/ImageCard";
 import { v4 as uuid } from "uuid";
 import ScoreBoard from "../../../components/ScoreBoard";
 import GameDashboard from "../../../components/GameDashboard";
+import { InferGetStaticPropsType } from "next";
 
-const Counting: React.FC = () => {
+const Counting = ({ Data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const [randomNumber, setRandomNumber] = useState<number>(0);
   const [gameData] = useState<Array<GameData>>(Data);
   const [counter, setCounter] = useState<number>(0);
@@ -26,7 +26,7 @@ const Counting: React.FC = () => {
   };
 
   //   render image times of randomNumber
-  let renderImage = [...Array(randomNumber)].map((index) => {
+  let renderImage = [...Array(randomNumber)].map(() => {
     return <ImageCard key={uuid()} currentImgPath={currentImage} />;
   });
 
@@ -100,3 +100,17 @@ const Counting: React.FC = () => {
 };
 
 export default Counting;
+
+export const getStaticProps = async () => {
+  const response = await fetch(
+    "https://gist.githubusercontent.com/touhidulShawan/ef6331bd216179a110fd1ace2f1b1c63/raw/0337233b13854a1ce919d03cb39186b229947731/NameThatPictureData"
+  );
+
+  const Data: GameData[] = await response.json();
+
+  return {
+    props: {
+      Data,
+    },
+  };
+};
