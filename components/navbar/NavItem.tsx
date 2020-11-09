@@ -9,11 +9,13 @@ interface Props {
 const NavItem: React.FC<Props> = (props) => {
   const { link, linkName } = props;
   return (
-    <li className="list-none">
+    <div className="list-none cursor-pointer">
       <Link href={link}>
-        <a>{linkName}</a>
+        <a className="mr-4 uppercase tracking-widest md:p-2 md:text-sm hover:text-blue-500 transform ease-in-out duration-500">
+          {linkName}
+        </a>
       </Link>
-    </li>
+    </div>
   );
 };
 
