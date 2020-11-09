@@ -51,11 +51,17 @@ const NameThatPicture = ({
   return (
     <Layout title="Name That Picture">
       {counter <= 24 ? (
-        <section>
+        <section className="flex flex-col justify-center items-center max-w-4xl mx-auto bg-gray-800 p-4 shadow-md rounded-md">
           <ScoreBoard score={score} />
           <ImageCard currentImgPath={currentImage} />
-          <form method="post" onSubmit={handleSubmit}>
+          <h1 className="text-xl  mb-5 text-gray-400">What is this?</h1>
+          <form
+            method="post"
+            onSubmit={handleSubmit}
+            className="flex flex-col justify-center items-start md:flex-row md:items-center md:justify-between"
+          >
             <input
+              className="py-3 px-4 text-lg bg-gray-800 outline-none shadow-outline"
               value={answer}
               type="text"
               name="userInput"
@@ -65,7 +71,12 @@ const NameThatPicture = ({
               placeholder="Type your answer here"
               onChange={handleChange}
             />
-            <button type="submit">Submit</button>
+            <button
+              type="submit"
+              className="py-3 px-8 mt-5 mb-5 uppercase bg-yellow-400 text-yellow-800 border-b-4 rounded-sm border-indigo-600 text-lg tracking-widest md:ml-4"
+            >
+              Submit
+            </button>
           </form>
         </section>
       ) : (

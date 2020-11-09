@@ -4,8 +4,12 @@ interface ImageProps {
 
 const ImageCard: React.FC<ImageProps> = ({ currentImgPath }) => {
   return (
-    <div>
-      <img src={currentImgPath} alt="image of object" />
+    <div className="w-56 h-56 mt-3 mb-5">
+      <img
+        src={currentImgPath}
+        alt="image of object"
+        className="w-full h-full"
+      />
     </div>
   );
 };
