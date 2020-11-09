@@ -65,17 +65,29 @@ const Counting = ({ Data }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
   return (
     <Layout title="Counting">
-      <h1>Counting Game</h1>
       {counter <= 24 ? (
-        <>
+        <section className="flex flex-col justify-center items-center max-w-5xl mx-auto bg-gray-800 p-4 shadow-md rounded-md">
           <ScoreBoard score={score} />
-          <div>{renderImage}</div>
-          <div>
-            <h2>How many {currentImageName}s you see here</h2>
+          <div className="grid grid-cols-1 md:gap-8 md:grid-cols-3">
+            {renderImage}
+          </div>
+          <div className="my-4">
+            <h2 className="text-2xl text-gray-400">
+              How many{" "}
+              <span className="text-yellow-500 font-bold">
+                {currentImageName}
+              </span>{" "}
+              you see here
+            </h2>
           </div>
           <div>
-            <form method="post" onSubmit={handleSubmit}>
+            <form
+              method="post"
+              onSubmit={handleSubmit}
+              className="flex flex-col justify-center items-start md:flex-row md:items-center md:justify-between"
+            >
               <input
+                className="py-3 px-4 text-lg bg-gray-800 outline-none shadow-outline"
                 type="number"
                 name="userInput"
                 id="userInput"
@@ -84,10 +96,15 @@ const Counting = ({ Data }: InferGetStaticPropsType<typeof getStaticProps>) => {
                 value={answer}
                 onChange={handleChange}
               />
-              <button type="submit">Submit Your Answer</button>
+              <button
+                type="submit"
+                className="py-3 px-8 mt-5 mb-5 uppercase bg-yellow-400 text-yellow-800 border-b-4 rounded-sm border-indigo-600 text-lg tracking-widest md:ml-4"
+              >
+                Submit
+              </button>
             </form>
           </div>
-        </>
+        </section>
       ) : (
         <GameDashboard
           score={score}
