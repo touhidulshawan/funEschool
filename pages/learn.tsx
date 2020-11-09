@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Book from "../components/book/Book";
 import { InferGetStaticPropsType } from "next";
 
-interface Book {
+interface BookType {
   id: string;
   book: string;
 }
@@ -11,7 +11,7 @@ interface Book {
 interface Course {
   id: string;
   title: string;
-  bookName: Array<Book>;
+  bookName: Array<BookType>;
 }
 
 const Learn = ({
@@ -20,7 +20,7 @@ const Learn = ({
   return (
     <Layout title="Learn">
       {courseData.map((course) => (
-        <section key={course.id}>
+        <section key={course.id} className="my-8">
           <h1>{course.title}</h1>
           {course.bookName.map((book) => (
             <Book key={book.id} bookName={book.book} courseFor={course.title} />
