@@ -18,7 +18,7 @@ export interface UserAnswer {
   correctAnswer: string;
 }
 
-const Quiz = () => {
+const Quiz: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [questions, setQuestions] = useState<QuestionState[]>([]);
   const [quesNumber, setQuesNumber] = useState(0);
