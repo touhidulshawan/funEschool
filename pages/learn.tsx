@@ -19,14 +19,22 @@ const Learn = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Learn">
-      {courseData.map((course) => (
-        <section key={course.id} className="my-8">
-          <h1>{course.title}</h1>
-          {course.bookName.map((book) => (
-            <Book key={book.id} bookName={book.book} courseFor={course.title} />
-          ))}
-        </section>
-      ))}
+      <section className="max-w-xl mx-auto mt-3  md:mt-10 px-5 mb-5 grid grid-cols-1 md:grid-cols-2 justify-center items-center">
+        {courseData.map((course) => (
+          <section key={course.id} className="my-8">
+            <h1 className="text-3xl capitalize tracking-wide my-4 text-teal-400 ">
+              {course.title}
+            </h1>
+            {course.bookName.map((book) => (
+              <Book
+                key={book.id}
+                bookName={book.book}
+                courseFor={course.title}
+              />
+            ))}
+          </section>
+        ))}
+      </section>
     </Layout>
   );
 };
