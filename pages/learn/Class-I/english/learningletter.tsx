@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { InferGetStaticPropsType } from "next";
 import Layout from "../../../../components/Layout";
 import { v4 as uuid } from "uuid";
@@ -13,26 +14,57 @@ const LearningWord = ({
   letters,
   wordWithImage,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const [toggleCase, setToggleCase] = useState<boolean>(false);
   return (
     <Layout title="Learning Word">
-      <section>
-        <h1>Learning Letter and Word</h1>
+      <section className="py-2 mb-8">
+        <h1 className="text-center text-2xl tracking-wider">
+          Learning Letter and Word
+        </h1>
+        <h2 className="text-center text-lg text-pink-500 my-3 tracking-wide">
+          There are 26 letters in English
+        </h2>
       </section>
       <div>
-        <section>
-          <h2>There are 26 letters in English</h2>
-          <div>
+        <section className="ml-6">
+          <button
+            className="mr-2 tracking-wide lowercase shadow-outline p-2 rounded text-gray-200"
+            onClick={() => setToggleCase(false)}
+          >
+            Lowercase
+          </button>
+          <button
+            className="mr-2 tracking-wide ml-2 uppercase shadow-outline p-2 rounded text-gray-200"
+            onClick={() => setToggleCase(true)}
+          >
+            Uppercase
+          </button>
+        </section>
+        <section className="p-4 my-8 md:my-12 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 gap-3 md:grid-cols-2 lg:grid-cols-4 border-b-2 pb-3 md:pr-4 md:border-r-2 border-gray-800 ">
             {letters.map((letter) => (
-              <div key={uuid()}>
-                <h2>{letter}</h2>
+              <div
+                key={uuid()}
+                className="bg-gray-200 w-32 h-32 flex flex-col justify-center items-center shadow-md border-2 border-gray-900 rounded-md"
+              >
+                <h2
+                  className={`text-6xl font-bold text-gray-800 ${
+                    toggleCase ? "uppercase" : "lowercase"
+                  }`}
+                >
+                  {letter}
+                </h2>
               </div>
             ))}
           </div>
-        </section>
-        <section>
-          <div>
+          <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4  gap-5">
             {wordWithImage.map(({ id, imgPath, name }) => (
-              <WordWithImageCard key={id} imagePath={imgPath} word={name} />
+              <WordWithImageCard
+                key={id}
+                imagePath={imgPath}
+                word={name}
+                textCase={toggleCase}
+              />
             ))}
           </div>
         </section>
