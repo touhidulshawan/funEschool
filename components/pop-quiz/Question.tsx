@@ -1,4 +1,4 @@
-import { UserAnswer } from "./index";
+import { UserAnswer } from "../../pages/games/pop_quiz";
 
 export interface Props {
   question: string;

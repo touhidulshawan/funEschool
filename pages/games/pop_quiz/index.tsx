@@ -6,7 +6,7 @@ import {
   Difficulty,
   QuestionState,
 } from "../../../utils/PopQuizAPI";
-import Question from "./Question";
+import Question from "../../../components/pop-quiz/Question";
 
 const TOTAL_QUESTION = 15;
 const CATEGORY = 17; //19
