@@ -15,10 +15,12 @@ const English = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="English">
       <section>
-        <h1>English</h1>
+        <h1 className="text-2xl mb-5 p-3 md:border-b-2 border-gray-800 tracking-widest text-center text-pink-500 ">
+          English
+        </h1>
       </section>
       <section>
-        <div>
+        <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-3">
           {data.map(({ bookName, courseFor, learning }) =>
             learning.map((d) => (
               <CourseCard
