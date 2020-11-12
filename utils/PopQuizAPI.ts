@@ -1,4 +1,4 @@
-import { shuffleArray } from "./utils";
+import { shuffleArray } from "./PopQuizUtils";
 
 export type Questions = {
   category: string;

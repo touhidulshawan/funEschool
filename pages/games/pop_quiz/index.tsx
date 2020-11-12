@@ -1,7 +1,11 @@
 import { useState } from "react";
 import Button from "../../../components/Button";
 import Layout from "../../../components/Layout";
-import { fetchQuestions, Difficulty, QuestionState } from "./API";
+import {
+  fetchQuestions,
+  Difficulty,
+  QuestionState,
+} from "../../../utils/PopQuizAPI";
 import Question from "./Question";
 
 const TOTAL_QUESTION = 15;
