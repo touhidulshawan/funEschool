@@ -18,7 +18,7 @@ function Home() {
             </Link>
           </div>
         </div>
-        <div className="m-auto lg:-mt-3">
+        <div className="m-auto lg:-mt-3 overflow-hidden">
           <HeroImage />
         </div>
       </section>

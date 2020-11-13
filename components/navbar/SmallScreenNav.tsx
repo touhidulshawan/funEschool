@@ -7,7 +7,7 @@ const SmallScreenNav: React.FC = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
 
   return (
-    <nav className="bg-gray-900 border-b-2 border-gray-800 mb-4 text-teal-400 p-2  w-full">
+    <nav className="bg-gray-900 border-b-2 border-gray-800 mb-4 text-teal-400 p-2 w-screen">
       <div className="container m-auto flex justify-between items-center">
         <div className="ml-6">
           <Logo />
