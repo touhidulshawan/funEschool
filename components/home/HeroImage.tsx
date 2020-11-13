@@ -1,13 +1,4 @@
-import Image from "next/image";
-
 const HeroImage: React.FC = () => {
-  return (
-    <Image
-      src="/images/children.svg"
-      alt="children Image"
-      width={400}
-      height={400}
-    />
-  );
+  return <img src="/images/children.svg" alt="children image" />;
 };
 export default HeroImage;

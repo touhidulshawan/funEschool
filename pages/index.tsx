@@ -12,13 +12,13 @@ function Home() {
           <Bio />
           <div className="mt-8 mb-4 lg:mt-12">
             <Link href="/learn">
-              <a className="bg-gray-900 text-teal-400 border-2 border-gary-800 rounded-md p-4 shadow-none tracking-wide uppercase hover:bg-gray-800 transition-all duration-200">
+              <a className="bg-gray-900 text-teal-400 border-2 border-gary-800 rounded-md p-4 shadow-none my-5 tracking-wide uppercase hover:bg-gray-800 transition-all duration-200">
                 Start Learning
               </a>
             </Link>
           </div>
         </div>
-        <div className="m-auto lg:-mt-3 overflow-hidden">
+        <div className="m-auto lg:-mt-3 overflow-hidden p-4 max-w-2xl">
           <HeroImage />
         </div>
       </section>
