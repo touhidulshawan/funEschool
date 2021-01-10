@@ -79,7 +79,7 @@ const Quiz: React.FC = () => {
   };
   return (
     <Layout title="Pop Quiz">
-      <section className="w-10/12 h-full p-4 m-auto my-4 bg-gray-100 rounded-sm md:w-2/4 shadow-sm">
+      <section className="w-10/12 h-full p-4 m-auto my-4 bg-gradient-to-br from-blue-200 to-pink-200 rounded-sm md:w-2/4 shadow-sm">
         <div>
           <h1 className="text-2xl font-bold text-center text-gray-800 uppercase">
             Pop Quiz

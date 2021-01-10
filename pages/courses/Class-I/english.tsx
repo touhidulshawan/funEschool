@@ -15,7 +15,7 @@ const English = ({ data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="English">
       <section>
-        <h1 className="text-2xl mb-5 p-3 md:border-b-2 border-gray-800 tracking-widest text-center text-pink-500 ">
+        <h1 className="text-2xl mb-5 p-3  tracking-widest text-center text-pink-500 ">
           English
         </h1>
       </section>

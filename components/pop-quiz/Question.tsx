@@ -35,7 +35,7 @@ const Question: React.FC<Props> = ({
           return (
             <div key={ans}>
               <button
-                className="shadow-outline py-2 px-4 my-4 text-gray-800 rounded-md block w-full"
+                className=" border-2 border-blue-300 py-2 px-4 my-4 text-gray-800 rounded-md block w-full"
                 disabled={userAnswer ? true : false}
                 value={ans}
                 onClick={handleCheckAnswer}

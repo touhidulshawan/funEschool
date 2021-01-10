@@ -28,13 +28,13 @@ const LearningWord = ({
       <div>
         <section className="ml-6">
           <button
-            className="mr-2 tracking-wide lowercase shadow-outline p-2 rounded text-gray-200"
+            className="mr-2 tracking-wide lowercase border-2 border-blue-400 border-opacity-50 p-2 rounded text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
             onClick={() => setToggleCase(false)}
           >
             Lowercase
           </button>
           <button
-            className="mr-2 tracking-wide ml-2 uppercase shadow-outline p-2 rounded text-gray-200"
+            className="mr-2 tracking-wide ml-2 uppercase border-2 border-blue-400 border-opacity-50 p-2 rounded text-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
             onClick={() => setToggleCase(true)}
           >
             Uppercase

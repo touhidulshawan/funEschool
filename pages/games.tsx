@@ -14,7 +14,7 @@ const Games = ({
   return (
     <Layout title="Games">
       <section className="mx-auto">
-        <h1 className="text-center capitalize text-xl my-4 p-3 md:text-2xl lg:border-b-2 lg:border-gray-800 lg:pb-6 text-gray-400 tracking-wide">
+        <h1 className="text-center capitalize text-xl my-4 p-3 md:text-2xl  lg:pb-6 text-purple-600 tracking-wide">
           test your learning by playing games
         </h1>
         <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4">

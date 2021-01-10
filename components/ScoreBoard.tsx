@@ -4,7 +4,7 @@ interface Score {
 
 const ScoreBoard: React.FC<Score> = ({ score }) => {
   return (
-    <div className="text-center text-yellow-500 text-xl uppercase tracking-wider font-bold block w-full p-4 mb-5">
+    <div className="text-center text-gray-800 text-xl uppercase tracking-wider font-bold block w-full p-4 mb-5">
       <h1>Score: {score}</h1>
     </div>
   );

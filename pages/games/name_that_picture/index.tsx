@@ -51,17 +51,17 @@ const NameThatPicture = ({
   return (
     <Layout title="Name That Picture">
       {counter <= 24 ? (
-        <section className="flex flex-col justify-center items-center max-w-4xl mx-auto bg-gray-800 p-4 shadow-md rounded-md">
+        <section className="flex flex-col justify-center items-center max-w-4xl mx-auto bg-gradient-to-r from-blue-300 to-pink-300 p-4 shadow-md rounded-md">
           <ScoreBoard score={score} />
           <ImageCard currentImgPath={currentImage} />
-          <h1 className="text-xl  mb-5 text-gray-400">What is this?</h1>
+          <h1 className="text-xl  mb-5 text-gray-700">What is this?</h1>
           <form
             method="post"
             onSubmit={handleSubmit}
             className="flex flex-col justify-center items-start md:flex-row md:items-center md:justify-between"
           >
             <input
-              className="py-3 px-4 text-lg bg-gray-800 outline-none shadow-outline"
+              className="py-3 px-4 text-lg bg-gray-800 outline-none border-2 border-blue-300 rounded"
               value={answer}
               type="text"
               name="userInput"

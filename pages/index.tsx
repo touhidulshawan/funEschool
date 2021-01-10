@@ -12,7 +12,7 @@ function Home() {
           <Bio />
           <div className="mt-8 mb-4 lg:mt-12">
             <Link href="/learn">
-              <a className="bg-gray-900 text-teal-400 border-2 border-gary-800 rounded-md p-4 shadow-none my-5 tracking-wide uppercase hover:bg-gray-800 transition-all duration-200">
+              <a className="bg-gradient-to-l from-blue-600 to-pink-600 text-gray-300 p-4 shadow-md my-5 rounded font-semibold tracking-widest   uppercase focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50">
                 Start Learning
               </a>
             </Link>
