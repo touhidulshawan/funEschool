@@ -29,6 +29,7 @@ const SmallScreenNav: React.FC = () => {
         <NavItem className="mr-6 uppercase" link="/" linkName="Home" />
         <NavItem className="mr-6 uppercase" link="/learn" linkName="Learn" />
         <NavItem className="mr-6 uppercase" link="/games" linkName="Games" />
+        <NavItem className="mr-6 uppercase" link="/ar" linkName="AR" />
       </ul>
     </nav>
   );

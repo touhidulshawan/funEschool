@@ -4,6 +4,7 @@ import Logo from "../Logo";
 import HomeIcon from "../icon/HomeIcon";
 import LearnIcon from "../icon/LearnIcon";
 import GameIcon from "../icon/GameIcon";
+import ARIcon from "../icon/ARIcon";
 
 const FullScreenNav: React.FC = () => {
   const router = useRouter();
@@ -56,6 +57,18 @@ const FullScreenNav: React.FC = () => {
               link="/games"
               linkName="Games"
             />
+          </li>
+          <li
+            className={
+              router.pathname === "/ar"
+                ? `${listStyle} text-blue-400`
+                : listStyle
+            }
+          >
+            <div className="w-3 h-3 -mt-2">
+              <ARIcon />
+            </div>
+            <NavItem className="mr-6 uppercase" link="/ar" linkName="AR" />
           </li>
         </ul>
       </div>
