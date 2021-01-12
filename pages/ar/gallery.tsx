@@ -21,7 +21,7 @@ const Gallery = ({
           <ol className="list-decimal ml-4 pl-4 text-base">
             <li className="mb-2  tracking-wide">
               First Click on this{" "}
-              <span className="text-pink-500">
+              <span className="text-pink-500 hover:text-blue-400 hover:underline transition-all duration-300 ease-in-out">
                 <a
                   href="https://raw.githubusercontent.com/touhidulShawan/funEschool/master/public/images/marker/hiro.png"
                   target="_blank"
