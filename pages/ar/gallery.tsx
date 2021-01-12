@@ -22,7 +22,9 @@ const Gallery = ({
             <li className="mb-2  tracking-wide">
               First Click on this{" "}
               <span className="text-pink-500">
-                <a href="#">Marker image</a>
+                <a href="https://raw.githubusercontent.com/touhidulShawan/funEschool/master/public/images/marker/hiro.png">
+                  Marker image
+                </a>
               </span>
             </li>
             <li className="mb-2  tracking-wide">
