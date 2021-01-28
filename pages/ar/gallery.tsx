@@ -16,7 +16,7 @@ const Gallery = ({
       <section className="mx-auto">
         <div className="m-4 p-4 border-b-2 border-gray-700 rounded shadow-none">
           <h1 className=" text-lg md:text-2xl mb-4 text-yellow-200">
-            How can I see Augmented Reality
+            How can I use Augmented Reality
           </h1>
           <ol className="list-decimal ml-4 pl-4 text-base">
             <li className="mb-2  tracking-wide">

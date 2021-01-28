@@ -66,7 +66,7 @@ const Counting = ({ Data }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <Layout title="Counting">
       {counter <= 24 ? (
-        <section className="flex flex-col justify-center items-center max-w-5xl mx-auto bg-gradient-to-br from-blue-300 to-pink-300 p-4 shadow-md rounded-md">
+        <section className="flex flex-col justify-center items-center max-w-5xl mx-auto bg-gradient-to-br from-blue-300 to-pink-300 p-4 pb-5 shadow-md rounded-md">
           <ScoreBoard score={score} />
           <div className="grid grid-cols-1 md:gap-8 md:grid-cols-3">
             {renderImage}
