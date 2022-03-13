@@ -2,16 +2,12 @@
 
 A learning platform for kids 👦🏻👧🏻
 
-> This is my final year project.
+> This was my final year project.
 
-NTB: This project is currently on under development 👷🏻‍♂
+📢📢📢 This project is not being developed anymore
 
-> You can view the project 🙈
+> You can view the project 🙈 Live Here 👉 [FunEschool](https://funeschool.vercel.app/)
 
-For that first you should have [nodejs](https://nodejs.org/en/) install in your machine 🖥️
+### INTRO
+https://user-images.githubusercontent.com/37136490/158076018-77f2ef6b-2d8a-4975-b427-4549113ec02a.mp4
 
-1. Clone or download source code ⬇️
-2. Go to funeschool directory and run `npm install`
-3. Then run `npm run dev` and open [http://localhost:3000](http://localhost:3000) in your browser to see the project
-
-> **Project will be live as soon as development work finished**
