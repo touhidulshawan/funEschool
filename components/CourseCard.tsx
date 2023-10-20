@@ -16,7 +16,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   return (
     <div className="flex flex-col justify-center items-center bg-gradient-to-br from-blue-300 to-pink-300  shadow-md pb-3 rounded transform hover:-translate-y-2 transition-all ease-in-out duration-300">
       <div className="w-full mb-5 m-auto border-b-2 border-gray-500 flex justify-center items-center p-4">
-        <Image src={`/images/${courseName}.svg`} width={200} height={200} />
+        <Image src={`/images/${courseName}.svg`} width={200} height={200} alt="course image" />
       </div>
       <Link
         href={`/learn/${courseFor}/${bookName.toLowerCase()}/${courseName}`}
